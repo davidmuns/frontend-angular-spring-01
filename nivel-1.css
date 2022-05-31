@@ -1,0 +1,85 @@
+/* Ejercicio 1 */
+* {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1200px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header,
+footer {
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header-hijos {
+    background-color: brown;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.header-hijos>div {
+    background: orange;
+}
+
+section {
+    background-color: black;
+    display: flex;
+}
+
+.section-hijo-1 {
+    background-color: aqua;
+    display: flex;
+    flex: 2 1 auto;
+    flex-flow: row wrap;
+}
+
+.section-hijo-2 {
+    background-color: aqua;
+    flex: 1 1 auto;
+}
+
+.section-hijo-1>div,
+.section-hijo-2>div {
+    background-color: antiquewhite;
+    flex: 1 1 40%;
+}
+
+footer>div {
+    background-color: darkseagreen;
+}
+
+/* Ejercicio 2 (Version tablet) */
+@media screen and (max-width: 780px) {
+    section {
+        flex-direction: column;
+        background-color: yellow;
+    }
+}
+
+/* Ejercicio 3 (Version movil) */
+@media screen and (max-width: 480px) {
+
+    header {
+        background-color: rgb(0, 255, 76);
+    }
+
+    section {
+        flex-direction: column;
+        background-color: rgb(0, 255, 76);
+    }
+
+    .section-hijo-1 {
+        flex-direction: column;
+    }
+
+    .header-hijos {
+        flex-direction: column;
+    }
+}
